@@ -13,5 +13,5 @@ jobs:
       - name: Build and Deploy
         uses: pangyuworld/maven-deploy-action@main
         env:
-          SETTINGS_VALUE: ${{ MAVEN_SETTINGS }}
+          SETTINGS_VALUE: ${{ secrets.MAVEN_SETTINGS }}
           REPOSITORY: https://github.com/iotat-software/iotat-core.git
