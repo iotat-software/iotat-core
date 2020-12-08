@@ -12,7 +12,7 @@
 
     <groupId>cn.iotat</groupId>
     <artifactId>iotat-core</artifactId>
-    <version>0.0.1.20201207-2</version>
+    <version>0.0.1.20201208-1</version>
     <description>物联网应用技术创新实践班软件开发核心包</description>
 
     <properties>

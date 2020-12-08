@@ -1,0 +1,17 @@
+name: Build and Deploy
+on: # 触发条件
+  push:
+    branches:
+      - main # 仅向 hexo-config 分支 push 时触发，该分支存放博客源文件
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Build and Deploy
+        uses: pangyuworld/maven-deploy-action@main
+        env:
+          SETTINGS_VALUE: ${{ MAVEN_SETTINGS }}
+          REPOSITORY: https://github.com/iotat-software/iotat-core.git
