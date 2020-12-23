@@ -5,7 +5,7 @@ public enum HttpErrorCodeEnum {
     /**
      * 必填参数没有填写
      */
-    REQUIRED_PARAM_NOT_FILL("1000", "param 'id' is required"),
+    REQUIRED_PARAM_NOT_FILL("1000", "some required params is not fill"),
     /**
      * 用戶未登錄
      */
@@ -14,11 +14,19 @@ public enum HttpErrorCodeEnum {
      * 用戶無操作權限
      */
     PERMISSION_DENIED("1002", "user have no permission"),
+    /**
+     * 用户上传的Token的subject错误，即accessToken和refreshToken混乱
+     */
+    TOKEN_SUBJECT_NOT_MATCHED("1003","token type not matched"),
     //=========== 内部错误(2xxx) ===========
     /**
      * 未知錯誤
      */
     UNKNOWN_ERROR("2000","server have some unknown error"),
+    /**
+     * 生成用户ID错误
+     */
+    ID_GENERATOR_ERROR("2001","some unknown errors with generating id"),
     //=========== 网络错误(3xxx) ===========
 
     //=========== 业务错误(4xxx) ===========
